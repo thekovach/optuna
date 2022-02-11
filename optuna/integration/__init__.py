@@ -29,6 +29,7 @@ _import_structure = {
     "xgboost": ["XGBoostPruningCallback"],
     "fastaiv1": ["FastAIV1PruningCallback"],
     "fastaiv2": ["FastAIV2PruningCallback", "FastAIPruningCallback"],
+    "comet": ["CometCallback"]
 }
 
 
@@ -64,6 +65,7 @@ if TYPE_CHECKING:
     from optuna.integration.tfkeras import TFKerasPruningCallback  # NOQA
     from optuna.integration.wandb import WeightsAndBiasesCallback  # NOQA
     from optuna.integration.xgboost import XGBoostPruningCallback  # NOQA
+    from optuna.integration.comet import CometCallback  # NOQA
 else:
 
     class _IntegrationModule(ModuleType):
