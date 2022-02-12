@@ -122,8 +122,6 @@ class CometCallback(object):
         exp.log_other("trial_step", trial.number)
         exp.set_start_time(trial.datetime_start.timestamp())
         exp.set_end_time(trial.datetime_complete.timestamp())
-        # wandb.config.update(attributes)
-        # wandb.log({**trial.params, **metrics}, step=trial.number)
 
     def _initialize_experiment(self) -> comet_ml.APIExperiment:
         """Initializes Comet Experiment."""
